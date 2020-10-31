@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row box-form" align="center">
+        <div class="col-sm-12">
+            <h2>Upload File to Share</h2>
+        </div>
+    </div>
+    <div class="row box-form">
+        <div class="col-sm-12" align="center">
+            <form>
+                <div>
+                    <br>
+                    <input class="btn" style="background-color:#ebebe0" mat-button type="file"
+                        (change)="onFileChanged($event)">
+                    <br>
+                    <br>
+
+                </div>
+            </form>
+            <button class="btn btn-primary" (click)="onClickUpload()">
+                Upload
+            </button>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row" *ngIf=showLink>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6" align="center">
+            <div class="card">
+                <div class="card-header bg-primary text-white" align="left" style="padding: 0.25rem">
+                    <h4>&nbsp;Download Link</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-10">
+                           <h5>{{feedback.link}}</h5> 
+                        </div>
+                        <div class="col-sm-2" class="text-black">
+                            <button (click)="copyMessage()" value="click to copy">Copy</button>
+                            <i class="fa fa-files-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+
+    </div>
+</div>
